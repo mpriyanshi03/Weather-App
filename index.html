@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" href="img/images/browser.jpg">
+    <link rel="stylesheet" href="/syle.css">
+</head>
+<body>
+    <div class="card">
+        
+        <div class="search">
+            <input type="text" placeholder="Enter City Name" spellcheck="false" autocomplete="off">
+            <!-- <div class="suggestions"></div> -->
+            
+            <button><img src="./img/images/search.png" alt="Search"></button>
+       </div>
+        <div class="error">
+            <p>Invalid City Name</p>
+        </div>
+
+
+        <div class="weather">
+            <img src="/img/images/rain.png" alt="Rain" class="weather-icon">
+            <h1 class="temp">22 °C</h1>
+            <h2 class="city">New York</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="/img/images/humidity.png" alt="Humid">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="/img/images/wind.png" alt="Humid">
+                    <div>
+                        <p class="wind">13 km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

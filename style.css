@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=UoqMunThenKhung&display=swap');
+* {
+    font-size: 25px;
+    font-family:"Playfair", serif;
+    box-sizing: border-box;
+
+}
+
+body{
+     background-color: rgba(0, 0, 0, 0.85); 
+}
+
+.card{
+    width: 90%;
+    max-width: 700px;
+    background-image: linear-gradient(135deg, rgba(255, 0, 150, 0.6), rgba(128, 0, 255, 0.8));
+    color: white;
+    border-radius: 40px;
+    margin: 100px auto 0;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search input{
+    border: 0;
+    outline: black;
+    background-color: #ebfffc;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font: 18px;
+}
+
+.search button{
+    border: 0;
+    outline: black;
+    background-color: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.search button img{
+    width: 25px;
+}
+
+.weather{
+    width: 600px;
+    margin-top: 30px;
+}
+
+.weather h1{
+    font-size:80px;
+    font-weight: 500;
+}
+.weather h2{
+    font-size:45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    margin: 50px;
+}
+
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.col img{
+    width: 60px;
+    margin-right: 10px;
+}
+
+.humidity, .wind{
+    font-size: 23px;
+    margin-top: 15px
+}
+.weather{
+    display: none;
+}
+
+.error{
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+.suggestion {
+    position: absolute;
+    background-color: white;
+    color: black;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 5px;
+    margin-top: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
