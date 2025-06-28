@@ -37,7 +37,7 @@ async function checkWeather(city) {
         else if(data.weather[0].main==="Rain"){
             weatherIcon.src="/img/images/rain.png"
         }
-
+        
         document.querySelector(".weather").style.display="Block";
         document.querySelector(".error").style.display="none";
     }
@@ -52,7 +52,7 @@ searchBox.addEventListener("input", async () =>{
         return;
     }
 
-    const response= await fetch(`${geoUrl}${query}&limit=6&appid=${apiKey}`);
+    const response= await fetch(`${geoUrl}${query}&limit=5&appid=${apiKey}`);
 
     const data=await response.json();
 
@@ -61,25 +61,27 @@ searchBox.addEventListener("input", async () =>{
      data.forEach(city =>{
         const div=document.createElement("div");
         div.classList.add("suggestion");
-        div.innerHTML=`${city.name}, ${city.country}`;
+        div.innerHTML=`${city.name}, ${city.state}, ${city.country}`;
         div.addEventListener("click", () =>{
-            searchBox.value=city.name;
+            searchBox.value=`${city.name}, ${city.state}, ${city.country}`;
             checkWeather(city.name);
             suggestionEl.innerHTML="";
         });
         suggestionEl.appendChild(div);
-    }) ;
+    });
 });
 
 searchBtn.addEventListener("click", () =>{
     checkWeather(searchBox.value);
     suggestionEl.innerHTML="";
+    searchBox.value = "";
+    
 });
 searchBox.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
         checkWeather(searchBox.value);
         suggestionEl.innerHTML="";
+        searchBox.value = "";
     }
+    
 });
-
-
