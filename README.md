@@ -69,6 +69,13 @@ weather-app/
 │       ├── index.html    # Main HTML file
 │       ├── main.js       # Client-side JavaScript
 │       ├── style.css     # Styling
-│       └── img/          # Images (optional)
-└── docs/                 # Documentation (optional)
-```
+│       └── img/          # Images
+
+📱 To run your new professional app:
+
+1. Clone the repo
+2. cd server
+3. npm install
+4. Create .env with your API key
+5. npm run dev
+6. Visit localhost:3000
